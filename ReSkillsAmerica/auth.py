@@ -160,7 +160,9 @@ def get_current_balance(user_details):
     return user_details[4]
 
 
-def logout():
+def logout(account_number, first_name, last_name, email, password):
+    if_user_logsOut = database.delete(account_number, first_name, last_name, email
+password)
     login()
 
 
